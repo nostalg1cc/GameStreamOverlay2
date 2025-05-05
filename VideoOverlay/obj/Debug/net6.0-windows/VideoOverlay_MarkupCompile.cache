@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 207-59340207
 MainWindow.xaml;SettingsWindow.xaml;VideoOverlayControl.xaml;
 
-False
+True
 
