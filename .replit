@@ -1,8 +1,8 @@
-modules = ["dotnet"]
+modules = ["dotnet", "dotnet-sdk"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["zip"]
+packages = ["zip", "dotnet-sdk"]
 
 [workflows]
 runButton = "Project"
@@ -14,28 +14,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "BuildAndRunVideoOverlay"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "run_video_overlay"
+args = "build_video_overlay"
 
 [[workflows.workflow]]
-name = "BuildAndRunVideoOverlay"
+name = "build_video_overlay"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd VideoOverlay && dotnet build && dotnet run"
-waitForPort = 5000
-
-[[workflows.workflow]]
-name = "run_video_overlay"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd VideoOverlay && dotnet run"
+args = "cd VideoOverlay && dotnet build"
 
 [deployment]
 run = ["sh", "-c", "cd VideoOverlay && dotnet build && dotnet run"]

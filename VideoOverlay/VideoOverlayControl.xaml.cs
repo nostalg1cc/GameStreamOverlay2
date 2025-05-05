@@ -13,7 +13,6 @@ namespace VideoOverlay
         private WebView2 _webView;
         private Window _parentWindow;
         private string _currentUrl;
-        private double _aspectRatio = 16.0 / 9.0;
         private bool _isInteractable = false;
 
         public event EventHandler CloseRequested;

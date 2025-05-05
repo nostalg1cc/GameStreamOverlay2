@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0oJ95SjmSJhuVjxmvQnWb/cD3BL2NO9tuh7/RuOIxMxe92z86FpOIR9l7pJVnsSAjZok2mpiZmH0Ja5lDSiC4w==",
+  "success": true,
+  "projectFilePath": "/home/runner/workspace/VideoOverlay/VideoOverlay.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/microsoft.web.webview2/1.0.1343.22/microsoft.web.webview2.1.0.1343.22.nupkg.sha512",
+    "/home/runner/.nuget/packages/newtonsoft.json/13.0.2/newtonsoft.json.13.0.2.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.windowsdesktop.app.ref/6.0.30/microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512"
+  ],
+  "logs": []
+}

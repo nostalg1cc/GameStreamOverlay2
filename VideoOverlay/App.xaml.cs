@@ -7,8 +7,8 @@ namespace VideoOverlay
     public partial class App : Application
     {
         private TrayIconManager _trayIconManager;
-        private KeyboardHook _keyboardHook;
-        private OverlayManager _overlayManager;
+        internal KeyboardHook _keyboardHook;
+        internal OverlayManager _overlayManager;
         private Settings _settings;
 
         protected override void OnStartup(StartupEventArgs e)

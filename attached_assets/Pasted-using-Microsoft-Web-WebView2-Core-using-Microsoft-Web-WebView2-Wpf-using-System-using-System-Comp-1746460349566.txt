@@ -99,10 +99,8 @@ namespace VideoOverlay
 
         private void PinButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Application.Current is App app)
-            {
-                app._overlayManager?.PinCurrentVideo();
-            }
+            var overlayManager = (Application.Current as App)?._overlayManager;
+            overlayManager?.PinCurrentVideo();
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
@@ -112,12 +110,10 @@ namespace VideoOverlay
             
             if (settingsWindow.SettingsChanged)
             {
-                if (Application.Current is App app)
-                {
-                    app._keyboardHook.UnregisterHotKey();
-                    app._keyboardHook.RegisterHotKey(_settings.ToggleOverlayModifiers, _settings.ToggleOverlayKey);
-                    _settings.Save();
-                }
+                var app = Application.Current as App;
+                app._keyboardHook.UnregisterHotKey();
+                app._keyboardHook.RegisterHotKey(_settings.ToggleOverlayModifiers, _settings.ToggleOverlayKey);
+                _settings.Save();
             }
         }
 
