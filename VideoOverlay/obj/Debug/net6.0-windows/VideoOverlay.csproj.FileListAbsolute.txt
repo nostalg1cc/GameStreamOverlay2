@@ -1,11 +1,3 @@
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay.csproj.AssemblyReference.cache
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/MainWindow.g.cs
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/SettingsWindow.g.cs
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlayControl.g.cs
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/App.g.cs
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_Content.g.cs
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_MarkupCompile.cache
-/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_MarkupCompile.lref
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/runtimes/win-x86/native/WebView2Loader.dll
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/runtimes/win-x64/native/WebView2Loader.dll
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/runtimes/win-arm64/native/WebView2Loader.dll
@@ -18,6 +10,14 @@
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/Microsoft.Web.WebView2.WinForms.dll
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/Microsoft.Web.WebView2.Wpf.dll
 /home/runner/workspace/VideoOverlay/bin/Debug/net6.0-windows/Newtonsoft.Json.dll
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay.csproj.AssemblyReference.cache
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/MainWindow.g.cs
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/SettingsWindow.g.cs
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlayControl.g.cs
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/App.g.cs
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_Content.g.cs
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_MarkupCompile.cache
+/home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/VideoOverlay_MarkupCompile.lref
 /home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/App.baml
 /home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/MainWindow.baml
 /home/runner/workspace/VideoOverlay/obj/Debug/net6.0-windows/SettingsWindow.baml

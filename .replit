@@ -22,7 +22,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd VideoOverlay && dotnet build"
+args = "cd VideoOverlay && dotnet build VideoOverlay.csproj"
 
 [deployment]
 run = ["sh", "-c", "cd VideoOverlay && dotnet build && dotnet run"]

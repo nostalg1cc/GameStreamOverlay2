@@ -1,10 +1,13 @@
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.Wpf;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace VideoOverlay
 {
@@ -383,10 +386,27 @@ namespace VideoOverlay
                         _webView.CoreWebView2.Navigate("edge://extensions/");
                     };
                     
-                    // Add to control bar (assuming ControlBar is a StackPanel)
-                    if (ControlBar is StackPanel panel)
+                    // Let's use a simpler approach - find the first stack panel by walking through the control hierarchy
+                    StackPanel leftPanel = null;
+                    
+                    // Get the control bar's grid directly
+                    if (ControlBar != null && ControlBar is Border controlBorder && 
+                        controlBorder.Child is Grid controlBarGrid)
                     {
-                        panel.Children.Insert(0, extensionsButton);
+                        // Get the left stack panel from the grid
+                        foreach (var child in controlBarGrid.Children)
+                        {
+                            if (child is StackPanel panel && panel.Orientation == Orientation.Horizontal)
+                            {
+                                leftPanel = panel;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (leftPanel != null)
+                    {
+                        leftPanel.Children.Insert(0, extensionsButton);
                     }
                     
                     // Create an "Ad Blocker" button for quick access to popular ad blockers
@@ -404,10 +424,10 @@ namespace VideoOverlay
                         _webView.CoreWebView2.Navigate("https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm");
                     };
                     
-                    // Add to control bar
-                    if (ControlBar is StackPanel adBlockPanel)
+                    // Add to the same panel
+                    if (leftPanel != null)
                     {
-                        adBlockPanel.Children.Insert(1, adBlockerButton);
+                        leftPanel.Children.Insert(1, adBlockerButton);
                     }
                 }
                 catch (Exception ex)
@@ -423,6 +443,28 @@ namespace VideoOverlay
         public void Dispose()
         {
             _webView?.Dispose();
+        }
+        
+        // Helper method to find visual children of a specific type
+        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+            yield break;
         }
     }
 }
