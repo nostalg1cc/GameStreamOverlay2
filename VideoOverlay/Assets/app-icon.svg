@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a6fc9" />
+      <stop offset="100%" stop-color="#8a3ebc" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="32" fill="url(#gradient)" />
+  <g fill="white" opacity="0.9">
+    <rect x="58" y="78" width="140" height="100" rx="8" />
+  </g>
+  <g fill="url(#gradient)">
+    <rect x="68" y="88" width="120" height="80" rx="4" />
+  </g>
+  <polygon fill="white" points="108,128 148,108 148,148" />
+  <g fill="white" opacity="0.7">
+    <circle cx="128" cy="200" r="10" />
+    <rect x="88" y="195" width="30" height="10" rx="5" />
+    <rect x="138" y="195" width="30" height="10" rx="5" />
+  </g>
+  <circle cx="205" cy="50" r="20" fill="#ff5555" opacity="0.9" />
+</svg>

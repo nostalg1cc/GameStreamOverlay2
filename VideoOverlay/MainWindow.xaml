@@ -1,0 +1,40 @@
+<Window x:Class="VideoOverlay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoOverlay"
+        mc:Ignorable="d"
+        Title="Video Overlay"
+        Height="600" Width="1000"
+        MinHeight="300" MinWidth="400"
+        WindowStartupLocation="CenterScreen"
+        Visibility="Hidden"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Background="#222222">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="10,5">
+                <TextBox x:Name="UrlTextBox" Width="300" Margin="0,0,10,0" KeyDown="UrlTextBox_KeyDown"/>
+                <Button Content="Load" Click="LoadButton_Click" Padding="10,0"/>
+                <Button Content="Pin Video" Click="PinButton_Click" Margin="10,0,0,0" Padding="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10,5">
+                <Button Content="Settings" Click="SettingsButton_Click" Padding="10,0" Margin="0,0,10,0"/>
+                <Button Content="Minimize" Click="MinimizeButton_Click" Padding="10,0"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Grid.Row="1" x:Name="ContentGrid">
+            <!-- Web view will be added programmatically -->
+        </Grid>
+    </Grid>
+</Window>
